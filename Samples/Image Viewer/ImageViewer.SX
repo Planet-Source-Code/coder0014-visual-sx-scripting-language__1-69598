@@ -1,0 +1,12 @@
+program window_load()
+set_filelistbox.pattern[1,"*.bmp;*.jp*;*.gif;*.tif*;*.ico;*.cur"];
+endp;
+program drivelistbox1_click()
+set_dirlistbox.path[1,drivelistbox1.drive];
+endp;
+program dirlistbox1_click()
+set_filelistbox.path[1,dirlistbox1.path];
+endp;
+program filelistbox1_click()
+set_picture.image[1,filelistbox1.path & "\" & filelistbox1.filename];
+endp;
